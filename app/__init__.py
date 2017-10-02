@@ -10,9 +10,11 @@ from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 #from flask_admin.contrib.sqla import ModelView
 
-bootstrap = Bootstrap()
 db = SQLAlchemy()
+bootstrap = Bootstrap()
 migrate = Migrate()
+from .models import (User, Category, Object, Colors, association_table)
+
 
 def create_app(config_name):
     app = Flask(__name__)

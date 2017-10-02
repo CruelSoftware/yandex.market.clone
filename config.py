@@ -12,19 +12,21 @@ class DevelopmentConfig(Config):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'this_is_nice_secret_key'
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or \
         'postgres://yandex:yandex@localhost:5432/yandex'
-
+    #SQLALCHEMY_DATABASE_URI = 'sqlite:///db.sqlite3'
+    #SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or \
+    #    'postgresql+psycopg2://yandex:yandex@localhost/yandex'
 
 
 class TestingConfig(Config):
     TESTING = True
     SECRET_KEY = 'secret'
     SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URL') or \
-        'postgres://yandex:yandex@localhost:5432/yandex'
+        'postgresql://yandex:yandex@localhost:5432/yandex'
 
 
 class ProductionConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
-        'postgres://yandex:yandex@localhost:5432/yandex'
+        'postgresql://yandex:yandex@localhost:5432/yandex'
 
 
 config = {
