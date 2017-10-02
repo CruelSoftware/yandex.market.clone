@@ -32,10 +32,12 @@ class User(db.Model):
 class Category(db.Model):
     __tablename__ = 'category'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    title = db.Column(db.String(40), nullable=False, unique=True)
 
 class Object(db.Model):
     __tablename__ = 'object'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    title = db.Column(db.String(40), nullable=False, unique=True)
     colors = db.relationship('Colors', secondary=association_table)
 
 class Colors(db.Model):
