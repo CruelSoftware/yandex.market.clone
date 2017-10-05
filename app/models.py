@@ -79,17 +79,6 @@ class Image(db.Model):
         return IMAGE_URL + self.image
 
 
-# @listens_for(Image, 'after_insert')
-# def add_thumb(mapper, connection, target):
-#     if target.image:
-#         img = target.image
-#         splited_img = img.split('.')
-#         extension = splited_img[-1:][0]
-#         file = splited_img[:-1][0]
-#         thumbnail = file + '_thumb' + '.' + extension
-#         sql = "UPDATE image SET thumbnail='"+thumbnail+"' WHERE id="+str(target.id)
-#         db.engine.execute(sql)
-
 class Param(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     title = db.Column(db.String(100), nullable=False, unique=True)
