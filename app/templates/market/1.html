@@ -1,0 +1,29 @@
+<h1>СПИСОК ТОВАРОВ</h1>
+<ul class=items>
+    {% for object in objects %}
+    <li><h2><a href="/object/{{ object.id }}">Название: <em>{{ object.title }}</em> &nbsp; &nbsp; Цена: <em>{{object.price}}</em>
+        руб.</a></h2>
+        {% else %}
+    <li><em>Unbelievable. No entries here so far</em>
+    {% endfor %}
+</ul>
+
+<div class="rating hint i-bem rating_outline_yes" date-rate="5" data-bem="{&quot;hint&quot;:{&quot;content&quot;:&quot;Рейтинг&nbsp;модели&nbsp;4.5&nbsp;из&nbsp;5&quot;,&quot;offset&quot;:15}}">
+
+        <li><h2><a href="/object/{{ object.id }}">Название: <em>{{ object.title }}</em> &nbsp; &nbsp; Цена: <em>{{object.price}}</em>
+        <div class="n-snippet-card snippet-card clearfix i-bem b-zone n-snippet-card_js_inited">
+            <div class="snippet-card__view"><a class="snippet-card__image link i-bem snippet-card__image_js_inited link_js_inited" href="/product/1" title="Ноутбук Apple MacBook Pro 13 with Retina display Mid 2017">
+                <img class="image" src="//avatars.mds.yandex.net/get-mpic/195452/img_id561887665197370405/5hq" title="Ноутбук Apple MacBook Pro 13 with Retina display Mid 2017" alt="Ноутбук Apple MacBook Pro 13 with Retina display Mid 2017"></a>
+
+                    <div class="rating__value">4.5</div><div class="rating__corner"><div class="rating__triangle"></div></div></div></div>
+            <div class="snippet-card__info">
+                <a class="link n-smart-link i-bem" href="/product/1727685734/offers?track=srchlink&amp;show-uid=070049438204940565216001"><div class="snippet-card__price i-bem snippet-card__price_js_inited">
+                    <div class="price">от&nbsp;75 390&nbsp;₽</div></div><div class="snippet-card__subprice">до&nbsp;<span class="price">122 990&nbsp;₽</span></div></a></div>
+        <div class="snippet-card__content"><div class="snippet-card__table"><div class="snippet-card__row"><div class="snippet-card__col">
+            <h3 class="snippet-card__header snippet-card__header_type_full i-bem snippet-card__header_js_inited">
+                <a class="snippet-card__header-link shop-history__link link i-bem link_js_inited" href="/product/1727685734?show-uid=070049438204940565216001&amp;nid=54544" title="Ноутбук Apple MacBook Pro 13 with Retina display Mid 2017">
+                    <span class="snippet-card__header-text">Apple MacBook Pro 13 with Retina display Mid 2017</span></a>
+                <div class="stickers"></div></h3><ul class="snippet-card__desc-list"><li class="snippet-card__desc-item">Процессор: Core i5</li><li class="snippet-card__desc-item">Частота процессора: 2300 МГц</li><li class="snippet-card__desc-item">Объем оперативной памяти: 8 Гб</li><li class="snippet-card__desc-item">Объем жесткого диска: 128...256 Гб</li><li class="snippet-card__desc-item">Цвет: <div class="product-color-set"><div class="product-color" title="серебристый" style="background-color: #c0c0c0"></div></div></li></ul></div></div><div class="snippet-card__row"><div class="snippet-card__col"><div class="snippet-card__menu"><div class="snippet-card__menu-item"><a class="link link_theme_minor link_type_reviews i-bem link_js_inited" href="/product/1727685734/reviews?track=srchlink&amp;show-uid=070049438204940565216001">Отзывы&nbsp;<span class="small">14</span></a></div><div class="snippet-card__menu-item"><div class="n-product-toolbar i-bem  n-product-toolbar_js_inited"><a class="n-product-toolbar__item link link_theme_minor wishlist-control wishlist-control_type_toggle pseudo-checkbox hint b-zone b-spy-events i-bem wishlist-control_js_inited pseudo-checkbox_js_inited metrika_js_inited hint_js_inited link_js_inited"><i class="image image_name_favorite"></i><i class="image image_name_favorite-activated"></i><span class="n-product-toolbar__item-label n-product-toolbar__item-label_activated_no">Отложить</span><span class="n-product-toolbar__item-label n-product-toolbar__item-label_activated_yes">Отложено</span><div class="popup2 popup2_target_anchor popup2_autoclosable_yes popup2_theme_normal tooltip tooltip_size_xs tooltip_theme_normal tooltip_autoclosable_yes hint__tooltip i-bem tooltip_js_inited"><div class="popup2__tail"></div><div class="tooltip__content">Добавить&nbsp;в&nbsp;отложенные</div></div></a><div class="n-product-toolbar__item link link_theme_minor hint n-user-lists_type_compare i-bem n-user-lists_type_compare_in-list_no n-user-lists_type_compare_js_inited"><i class="image image_name_compare"></i><i class="image image_name_compare-in-list"></i><span class="n-product-toolbar__item-label n-product-toolbar__item-label_activated_no">Сравнить</span><span class="n-product-toolbar__item-label n-product-toolbar__item-label_activated_yes">В сравнении</span></div></div></div></div></div></div></div></div><div class="snippet-card__action i-bem snippet-card__action_js_inited"><a class="button button_size_s button_to_prices button_theme_blue n-smart-link i-bem button_js_inited" href="/product/1727685734/offers?track=srchbtn&amp;show-uid=070049438204940565216001"><span class="button__text">Цены&nbsp;<span class="small">244</span></span></a></div></div>
+        руб.</a></h2>
+
+<div class="panel-body"><img src="{{ url_for('static/images', filename=object.images[0].image) }}"></div>

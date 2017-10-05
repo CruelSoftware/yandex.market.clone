@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ object.title }}{% endblock %}
+
+
+{% block content %}
+    <div class="container top__title">{{ object.title }}</div>
+    <div class='container'>
+        <nav class="navbar navbar-default simple__navbar">
+          <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                    <li><a class='navbar-link normal__font_size' href="#">Описание</a></li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+
+    <div class="container">
+    {% if object.images|length > 1 %}
+        <div class="col-md-1">
+            {% for image in object.images %}
+        <a href="#"><img class="object__thumbnail" src="{{ image.url }}"></a>
+            {% endfor %}
+        </div>
+    {% endif %}
+            <a href="#"><img class="object__image col-md-4" src="{{ object.images[0].url }}"></a>
+
+            <div class="col-md-4">
+
+                <div class="middle__params_block">
+
+                    {% if object.colors %}
+                        <div class="middle__params">Цвет:
+                            {% for color in object.colors %}
+                                <div class="square" style="background: {{ color.html_code }}"></div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+                    {% for param in object.params %}
+                        <div class="middle__params">{{ param.param.title }} : {{ param.value }}</div>
+                    {% endfor %}
+
+
+                    </div>
+                </div>
+                <div class="col-md-2"><div class="top__title bold__price">{{ object.price }} ₽</div></div>
+            </div>
+
+{% endblock %}

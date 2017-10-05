@@ -5,7 +5,8 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'great_sercet_key'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-
+    IMAGE_STORE_PATH = './static/images'
+    IMAGE_STORE_BASE_URL = '/images/'
 
 class DevelopmentConfig(Config):
     DEBUG = True

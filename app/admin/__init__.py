@@ -1,5 +1,5 @@
 from flask import Blueprint
 
-market = Blueprint('market', __name__)
+admin_panel = Blueprint('admin_panel', __name__)
 
 from . import views
